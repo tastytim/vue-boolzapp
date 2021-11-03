@@ -9,6 +9,8 @@
   background-color: #dbdbd4;
   position: relative;
   min-width: 892px;
+  min-height: 430px;
+  max-height: 800px;
 }
 
 .green-header-row {
@@ -47,9 +49,7 @@
 
 .col-header {
   display: flex;
-  height: 15%;
-  min-height: 40px;
-  max-height: 60px;
+  height: 10%;
   background-color: #eaeaea;
   position: relative;
   align-items: center;
@@ -94,9 +94,7 @@
   display: flex;
   align-items: center;
   background-color: #8fdafa;
-  height: 17%;
-  min-height: 50px;
-  max-height: 70px;
+  height: 12%;
 }
 
 .div-news i {
@@ -122,8 +120,6 @@
 .div-search {
   background-color: #f9fafa;
   height: 10%;
-  min-height: 40px;
-  max-height: 60px;
   position: relative;
 }
 
@@ -151,21 +147,20 @@
 
 .div-overflow{
     overflow: auto;
-    min-height:234px;
     height: 68%;
 }
 
 #div-users{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     height: 100%;
 }
 
 .user-row-div {
+ display: flex;
   position: relative;
-  height: 70px;
-  display: flex;
+  height: 100px;
+  
   padding: 0 20px;
   border: 1px solid #eff1f1;
   align-items: center;
@@ -187,5 +182,17 @@
   font-size: small;
   color: #94999a;
 }
+
+.messages-div{
+    height: 80%;
+    background:url("../img/mine.jpg");
+}
+
+.send-messages-div{
+    height: 10%;
+    background-color: #F3EEEA;
+}
+
+
 
 
