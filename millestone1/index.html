@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BoolZapp</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div id="app">
+        <div class="container-whatsapp">
+          <div class="green-header-row"></div>
+          <div class="container-whatsapp-window">
+            <div class="col-12-4 border-right">
+              <div class="col-header">
+                <div class="col-header-div">
+                  <img src="img/avatar_io.jpg" alt="avatar_io" />
+                </div>
+                <div class="col-header-div-center custom-padding">
+                  <span>Nome Utente</span>
+                </div>
+                <div class="col-header-div-left">
+                  <i class="fas fa-circle-notch"></i>
+                  <i class="fas fa-comment-alt"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+                </div>
+              </div>
+              <div class="div-news">
+                <div><i class="far fa-bell-slash"></i></div>
+                <div class="div-news-text">
+                  <div>Ricevi notifiche di nuovi messaggi</div>
+                  <div class="div-news-custom-text">
+                    Attiva notifiche desktop
+                  </div>
+                </div>
+              </div>
+              <div class="div-search">
+                <i class="fas fa-search"></i>
+                <input
+                  id="search-input"
+                  type="text"
+                  placeholder="Cerca o inizia una nuova chat"
+                />
+              </div>
+
+              <div class="div-overflow">
+                <div id="div-users">
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                  <div class="user-row-div">
+                    <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                    <div class="user">
+                      <div class="name-user-div">Michele</div>
+                      <div class="last-mess-user-div">Tutto Fatto...</div>
+                      <div class="timestamp-user-div">10/01/2020 16:15:22</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12-8">
+              <div class="col-header">
+                <div class="col-header-div">
+                  <img src="img/avatar_1.jpg" alt="avatar1" />
+                </div>
+                <div class="col-header-div-center custom-padding">
+                  <div>Michele</div>
+                  <div class="header-col-timeText">
+                    Ultimo accesso oggi alle 10/01.01.2022 16:15:22
+                  </div>
+                </div>
+                <div class="col-header-div-left">
+                  <i class="fas fa-search"></i>
+                  <i class="fas fa-paperclip"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

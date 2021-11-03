@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-whatsapp {
+  height: 100vh;
+  background-color: #dbdbd4;
+  position: relative;
+  min-width: 892px;
+}
+
+.green-header-row {
+  height: 150px;
+  background-color: #0b9688;
+}
+
+.container-whatsapp-window {
+  display: flex;
+  background-color: #eaeaea;
+  position: absolute;
+  height: 95%;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.col-12-4 {
+  width: calc(4 * 100% / 12);
+  background-color: white;
+  height: 100%;
+}
+.col-12-8 {
+  width: calc(8 * 100% / 12);
+  height: 100%;
+}
+.col-12-3 {
+  width: calc(3 * 100% / 12);
+  height: 100%;
+}
+.col-12-6 {
+  width: calc(6 * 100% / 12);
+  height: 100%;
+}
+
+.col-header {
+  display: flex;
+  height: 15%;
+  min-height: 40px;
+  max-height: 60px;
+  background-color: #eaeaea;
+  position: relative;
+  align-items: center;
+}
+
+.border-right {
+  border-right: 1px solid #e2e2e2;
+}
+
+.col-header-div {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.col-header img {
+  height: 50%;
+  border-radius: 50%;
+  position: relative;
+  left: 5px;
+}
+
+.col-header-div-left {
+  position: absolute;
+  right: 5px;
+}
+.col-header-div-left i {
+  padding: 0 10px;
+  color: #b1b1b1;
+}
+
+.custom-padding {
+  padding: 0 10px;
+}
+
+.header-col-timeText, .last-mess-user-div {
+  font-size: small;
+  color: #94999a;
+}
+
+.div-news {
+  display: flex;
+  align-items: center;
+  background-color: #8fdafa;
+  height: 17%;
+  min-height: 50px;
+  max-height: 70px;
+}
+
+.div-news i {
+  font-size: 25px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  color: #8fdafa;
+  margin-left: 5px;
+  position: relative;
+}
+
+.div-news-text {
+  margin-left: 10px;
+}
+
+.div-news-custom-text {
+  text-decoration: underline;
+  font-size: small;
+  color: #547c8e;
+}
+
+.div-search {
+  background-color: #f9fafa;
+  height: 10%;
+  min-height: 40px;
+  max-height: 60px;
+  position: relative;
+}
+
+#search-input {
+  padding: 0 8%;
+  left: 10%;
+  height: 80%;
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #f6f6f6;
+}
+
+.div-search i {
+  position: absolute;
+  z-index: 1;
+  left: 8%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 10px;
+  color: #b1b1b1;
+}
+
+.div-overflow{
+    overflow: auto;
+    min-height:234px;
+    height: 68%;
+}
+
+#div-users{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.user-row-div {
+  position: relative;
+  height: 70px;
+  display: flex;
+  padding: 0 20px;
+  border: 1px solid #eff1f1;
+  align-items: center;
+}
+
+.user-row-div img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user {
+  padding: 0 10px;
+}
+
+.timestamp-user-div {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: small;
+  color: #94999a;
+}
+
+
