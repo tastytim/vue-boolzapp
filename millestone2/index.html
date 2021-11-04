@@ -56,19 +56,28 @@
 
               <div class="div-overflow">
                 <div id="div-users">
-                  <div class="height-100px" v-for="(item , index) of users_list">
-                    <div class="user-row-div">
-                      <div><img v-bind:src="item.avatar" v-bind:alt="item.avatar" /></div>
+                  <div
+                    class="height-100px"
+                    v-for="(item , index) of users_list"
+                    @click="chooseChat(item, index)"
+                  >
+                    <div
+                      class="user-row-div"
+                      :class="index === activeOpacity ? 'opacity' : ''"
+                    >
+                      <div>
+                        <img
+                          v-bind:src="item.avatar"
+                          v-bind:alt="item.avatar"
+                        />
+                      </div>
                       <div class="user">
                         <div class="name-user-div">{{item.name}}</div>
                         <div class="last-mess-user-div">Tutto Fatto...</div>
-                        <div class="timestamp-user-div">
-                          {{item.timesent}}
-                        </div>
+                        <div class="timestamp-user-div">{{item.timesent}}</div>
                       </div>
                     </div>
                   </div>
-               
                 </div>
               </div>
             </div>
@@ -76,13 +85,14 @@
             <div class="col-12-8">
               <div class="col-header">
                 <div class="col-header-div">
-                  <img src="img/avatar_1.jpg" alt="avatar1" />
+                  <img
+                    v-bind:src="activeChat.avatar"
+                    v-bind:alt="activeChat.avatar"
+                  />
                 </div>
                 <div class="col-header-div-center custom-padding">
-                  <div>Michele</div>
-                  <div class="header-col-timeText">
-                    Ultimo accesso oggi alle 10/01.01.2022 16:15:22
-                  </div>
+                  <div>{{activeChat.name}}</div>
+                  <div class="header-col-timeText">{{activeChat.timesent}}</div>
                 </div>
                 <div class="col-header-div-left">
                   <i class="fas fa-search"></i>
@@ -90,25 +100,21 @@
                   <i class="fas fa-ellipsis-v"></i>
                 </div>
               </div>
+
               <div class="messages-window-div">
-
-
-
-                <div class="message-block right">
-                  <div class="mess-sent">
-                    <div class="message-text">
-                      Hai portato a spasso il cane ?
-                    </div>
+                <div
+                  class="message-block"
+                  :class="messageItem.sent ? 'right' : 'left'"
+                  v-for="(messageItem , index) of activeChat.messages_list"
+                >
+                  <div :class="messageItem.sent ? 'mess-sent' : 'mess-receiv'">
+                    <div class="message-text">{{messageItem.message}}</div>
                     <div class="time-message-sent">
-                      <span> 10/01/2020 15:50:00</span>
+                      <span> {{messageItem.time_mess}}</span>
                     </div>
                   </div>
                 </div>
-               
-               
               </div>
-                
-             
 
               <div class="send-message-div">
                 <div class="col-10"><i class="far fa-smile"></i></div>

@@ -235,9 +235,6 @@
 }
 
 
-
-
-
 .send-message-div{
     height: 10%;
     background-color: #F3EEEA;
@@ -268,6 +265,11 @@
     transform: translate(-50% , -50%);
     border: 1px solid #f6f6f6;
     padding: 0 10px;
+}
+
+
+.opacity{
+  background-color: #E9EBEB;
 }
 
 

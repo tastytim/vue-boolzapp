@@ -7,7 +7,17 @@ const vueApp = new Vue({
       {
         name: "Michele",
         timesent: "04/10/2021 09:00:00",
-        avatar : "img/avatar_1.jpg"
+        avatar : "img/avatar_1.jpg",
+        messages_list: [
+            {
+                message : "Hello !",
+                sent : true
+            },
+            {
+                message : "Hello. how are you?",
+                sent : false
+            }
+        ]
       },
       {
         name: "Fabio",
@@ -22,7 +32,22 @@ const vueApp = new Vue({
       {
         name: "Luisa",
         timesent: "04/10/2021 09:00:00",
+        avatar : "img/avatar_6.jpg"
+      },
+      {
+        name: "Tim",
+        timesent: "04/10/2021 09:00:00",
         avatar : "img/avatar_4.jpg"
+      },
+      {
+        name: "Mario",
+        timesent: "04/10/2021 09:00:00",
+        avatar : "img/avatar_5.jpg"
+      },
+      {
+        name: "Marco",
+        timesent: "04/10/2021 09:00:00",
+        avatar : "img/avatar_8.jpg"
       },
       
     ],
