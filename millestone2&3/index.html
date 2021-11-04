@@ -116,10 +116,10 @@
                 </div>
               </div>
 
-              <div class="send-message-div">
+              <div id ="inputFocusSendMess" class="send-message-div" tabindex="0">
                 <div class="col-10"><i class="far fa-smile"></i></div>
                 <div class="col-80">
-                  <input type="text" placeholder="Scrivi un messaggio" />
+                  <input type="text" v-model="inputTextMess" placeholder="Scrivi un messaggio"  @keyup.enter="addNewMess"/>
                 </div>
                 <div class="col-10"><i class="fas fa-microphone"></i></div>
               </div>
