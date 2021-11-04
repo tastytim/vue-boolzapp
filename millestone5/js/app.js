@@ -2,7 +2,6 @@ Vue.config.devtools = true;
 
 const vueApp = new Vue({
   el: "#app",
-  
   data: {
     inputSearchText : "",
     inputTextMess : "",
@@ -94,8 +93,9 @@ const vueApp = new Vue({
         return;
       }
      this.users_list[this.activeOpacity].messages_list.push({
+       
       message: this.inputTextMess,
-      time_mess : "04/11/2021",
+      time_mess : this.getNow(),
       sent: true,
      });
      this.answerOk();
@@ -105,17 +105,18 @@ const vueApp = new Vue({
         setTimeout(() => {
           this.users_list[this.activeOpacity].messages_list.push({
             message: "Ok",
-            time_mess : "04/11/2021",
+            time_mess : this.getNow(),
             sent: false,
            });
         }, 1000);
     },
-    getNow: function() {
+    // https://stackoverflow.com/questions/57249466/getting-current-time-and-date-in-vue-js
+    getNow() {
       const today = new Date();
       const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
       const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       const dateTime = date +' '+ time;
-      this.timestamp = dateTime;
+      return dateTime;
     },
 
     getLastMess(messages){
@@ -124,8 +125,14 @@ const vueApp = new Vue({
       }else{
         return messages[messages.length-1].message;
       }
-
-      
+    },
+    getLastTime(messages){
+      if(messages.length === 0){
+        return "";
+      }else{
+        console.log(messages[messages.length-1].timesent)
+        return messages[messages.length-1].time_mess;
+      }
     }
   },
   mounted() {
