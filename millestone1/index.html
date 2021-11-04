@@ -56,91 +56,19 @@
 
               <div class="div-overflow">
                 <div id="div-users">
-                  <div class="height-100px">
+                  <div class="height-100px" v-for="(item , index) of users_list">
                     <div class="user-row-div">
-                      <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
+                      <div><img v-bind:src="item.avatar" v-bind:alt="item.avatar" /></div>
                       <div class="user">
-                        <div class="name-user-div">Michele</div>
+                        <div class="name-user-div">{{item.name}}</div>
                         <div class="last-mess-user-div">Tutto Fatto...</div>
                         <div class="timestamp-user-div">
-                          10/01/2020 16:15:22
+                          {{item.timesent}}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="height-100px">
-                    <div class="user-row-div">
-                      <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
-                      <div class="user">
-                        <div class="name-user-div">Michele</div>
-                        <div class="last-mess-user-div">Tutto Fatto...</div>
-                        <div class="timestamp-user-div">
-                          10/01/2020 16:15:22
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="height-100px">
-                    <div class="user-row-div">
-                      <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
-                      <div class="user">
-                        <div class="name-user-div">Michele</div>
-                        <div class="last-mess-user-div">Tutto Fatto...</div>
-                        <div class="timestamp-user-div">
-                          10/01/2020 16:15:22
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="height-100px">
-                    <div class="user-row-div">
-                      <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
-                      <div class="user">
-                        <div class="name-user-div">Michele</div>
-                        <div class="last-mess-user-div">Tutto Fatto...</div>
-                        <div class="timestamp-user-div">
-                          10/01/2020 16:15:22
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="height-100px">
-                    <div class="user-row-div">
-                      <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
-                      <div class="user">
-                        <div class="name-user-div">Michele</div>
-                        <div class="last-mess-user-div">Tutto Fatto...</div>
-                        <div class="timestamp-user-div">
-                          10/01/2020 16:15:22
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="height-100px">
-                    <div class="user-row-div">
-                      <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
-                      <div class="user">
-                        <div class="name-user-div">Michele</div>
-                        <div class="last-mess-user-div">Tutto Fatto...</div>
-                        <div class="timestamp-user-div">
-                          10/01/2020 16:15:22
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="height-100px">
-                    <div class="user-row-div">
-                      <div><img src="img/avatar_2.jpg" alt="avatar" /></div>
-                      <div class="user">
-                        <div class="name-user-div">Michele</div>
-                        <div class="last-mess-user-div">Tutto Fatto...</div>
-                        <div class="timestamp-user-div">
-                          10/01/2020 16:15:22
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
+               
                 </div>
               </div>
             </div>
@@ -165,16 +93,77 @@
               <div class="messages-window-div">
 
 
-              </div>
 
+                <div class="message-block right">
+                  <div class="mess-sent">
+                    <div class="message-text">
+                      Hai portato a spasso il cane ?
+                    </div>
+                    <div class="time-message-sent">
+                      <span> 10/01/2020 15:50:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-block right">
+                  <div class="mess-sent">
+                    <div class="message-text">
+                      Hai portato a spasso il cane ?
+                    </div>
+                    <div class="time-message-sent">
+                      <span> 10/01/2020 15:50:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-block left">
+                  <div class="mess-receiv">
+                    <div class="message-text">
+                      Hai portato a spasso il cane ?
+                    </div>
+                    <div class="time-message-sent">
+                      <span> 10/01/2020 15:50:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-block left">
+                  <div class="mess-receiv">
+                    <div class="message-text">
+                      Hai portato a spasso il cane ?
+                    </div>
+                    <div class="time-message-sent">
+                      <span> 10/01/2020 15:50:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-block left">
+                  <div class="mess-receiv">
+                    <div class="message-text">
+                      Hai portato a spasso il cane ?
+                    </div>
+                    <div class="time-message-sent">
+                      <span> 10/01/2020 15:50:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-block left">
+                  <div class="mess-receiv">
+                    <div class="message-text">
+                      Hai portato a spasso il cane ?
+                    </div>
+                    <div class="time-message-sent">
+                      <span> 10/01/2020 15:50:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+             
 
               <div class="send-message-div">
-                  <div class="col-10"><i class="far fa-smile"></i></div>
-                  <div class="col-80"><input type="text" placeholder="Scrivi un messaggio"></div>
-                  <div class="col-10"> <i class="fas fa-microphone"></i></div>
-                
-                
-               
+                <div class="col-10"><i class="far fa-smile"></i></div>
+                <div class="col-80">
+                  <input type="text" placeholder="Scrivi un messaggio" />
+                </div>
+                <div class="col-10"><i class="fas fa-microphone"></i></div>
               </div>
             </div>
           </div>

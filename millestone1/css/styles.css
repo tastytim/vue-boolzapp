@@ -89,7 +89,7 @@
   padding: 0 10px;
 }
 
-.header-col-timeText, .last-mess-user-div {
+.header-col-timeText, .last-mess-user-div, .time-message-sent {
   font-size: small;
   color: #94999a;
 }
@@ -187,10 +187,57 @@
   color: #94999a;
 }
 
+.message-block{
+    width: 50%;
+    min-width: 40%;
+    position: relative;
+    margin: 30px;
+}
+
 .messages-window-div{
     height: 80%;
     background:url("../img/mine.jpg");
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    justify-content: center;
 }
+
+.time-message-sent{
+    text-align: end;
+}
+.mess-sent {
+    width: 70%;
+    background-color: #D5F9BA;
+    margin: 0 40px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.mess-receiv{
+    width: 70%;
+    background-color: #ffff;
+    margin: 0 40px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.message-text{
+    padding: 0 20px;
+}
+
+.left{
+    align-self: start;
+}
+
+.right{
+    align-self: end;
+}
+
+
+
+
 
 .send-message-div{
     height: 10%;
@@ -215,13 +262,15 @@
 
 .col-80 input{
     width: 100%;
-    height: 90%;
+    height: 80%;
     position: absolute;
     left:50%;
     top:50%;
     transform: translate(-50% , -50%);
     border: 1px solid #f6f6f6;
+    padding: 0 10px;
 }
+
 
 
 
