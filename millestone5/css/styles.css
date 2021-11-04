@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-whatsapp {
+  height: 100vh;
+  background-color: #dbdbd4;
+  position: relative;
+  min-width: 892px;
+  min-height: 430px;
+  max-height: 800px;
+}
+
+.green-header-row {
+  height: 150px;
+  background-color: #0b9688;
+}
+
+.container-whatsapp-window {
+  display: flex;
+  background-color: #eaeaea;
+  position: absolute;
+  height: 95%;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.col-12-4 {
+  width: calc(4 * 100% / 12);
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.col-12-8 {
+  width: calc(8 * 100% / 12);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.col-12-3 {
+  width: calc(3 * 100% / 12);
+  height: 100%;
+}
+.col-12-6 {
+  width: calc(6 * 100% / 12);
+  height: 100%;
+}
+
+.col-header {
+  display: flex;
+  height: 10%;
+  background-color: #eaeaea;
+  position: relative;
+  align-items: center;
+}
+
+.border-right {
+  border-right: 1px solid #e2e2e2;
+}
+
+.col-header-div {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.col-header img {
+  height: 50%;
+  border-radius: 50%;
+  position: relative;
+  left: 5px;
+}
+
+.col-header-div-left {
+  position: absolute;
+  right: 5px;
+}
+.col-header-div-left i {
+  padding: 0 10px;
+  color: #b1b1b1;
+}
+
+.custom-padding {
+  padding: 0 10px;
+}
+
+.header-col-timeText, .last-mess-user-div, .time-message-sent {
+  font-size: small;
+  color: #94999a;
+}
+
+.div-news {
+  display: flex;
+  align-items: center;
+  background-color: #8fdafa;
+  height: 12%;
+}
+
+.div-news i {
+  font-size: 25px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  color: #8fdafa;
+  margin-left: 5px;
+  position: relative;
+}
+
+.div-news-text {
+  margin-left: 10px;
+}
+
+.div-news-custom-text {
+  text-decoration: underline;
+  font-size: small;
+  color: #547c8e;
+}
+
+.div-search {
+  background-color: #f9fafa;
+  height: 10%;
+  position: relative;
+}
+
+#search-input {
+  padding: 0 8%;
+  left: 10%;
+  height: 80%;
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #f6f6f6;
+}
+
+.div-search i {
+  position: absolute;
+  z-index: 1;
+  left: 8%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 10px;
+  color: #b1b1b1;
+}
+
+.div-overflow{
+    overflow: auto;
+    height: 68%;
+}
+
+#div-users{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.user-row-div {
+ display: flex;
+  position: relative;
+  height: 100px;
+  
+  padding: 0 20px;
+  border: 1px solid #eff1f1;
+  align-items: center;
+}
+
+.user-row-div img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user {
+  padding: 0 10px;
+}
+
+.timestamp-user-div {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: small;
+  color: #94999a;
+}
+
+.message-block{
+    width: 50%;
+    min-width: 40%;
+    position: relative;
+    margin: 30px;
+}
+
+.messages-window-div{
+    height: 80%;
+    background:url("../img/mine.jpg");
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.time-message-sent{
+    text-align: end;
+}
+.mess-sent {
+    width: 70%;
+    background-color: #D5F9BA;
+    margin: 0 40px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.mess-receiv{
+    width: 70%;
+    background-color: #ffff;
+    margin: 0 40px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.message-text{
+    padding: 0 20px;
+}
+
+.left{
+    align-self: start;
+}
+
+.right{
+    align-self: end;
+}
+
+
+.send-message-div{
+    height: 10%;
+    background-color: #F3EEEA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col-10{
+    width: 10%;
+    text-align: center;
+    color: #94999a;
+}
+
+.col-80{
+    width: 80%;
+    color: #94999a;
+    height: 100%;
+    position: relative;
+}
+
+.col-80 input{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50% , -50%);
+    border: 1px solid #f6f6f6;
+    padding: 0 10px;
+}
+
+
+.opacity{
+  background-color: #E9EBEB;
+}
+
+
+
+
+
