@@ -224,6 +224,7 @@
 
 .message-text{
     padding: 0 20px;
+    word-break: inherit;
 }
 
 .left{

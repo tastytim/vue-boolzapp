@@ -14,7 +14,12 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js" integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
+      integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <header></header>
@@ -47,18 +52,15 @@
                 </div>
               </div>
 
-
-
-
-
-
               <div class="div-search">
                 <i class="fas fa-search"></i>
                 <input
                   id="search-input"
                   type="text"
                   placeholder="Cerca o inizia una nuova chat"
-                  v-model="inputSearchText" /></div>
+                  v-model="inputSearchText"
+                />
+              </div>
 
               <div class="div-overflow">
                 <div id="div-users">
@@ -79,22 +81,20 @@
                       </div>
                       <div class="user">
                         <div class="name-user-div">{{item.name}}</div>
-                        <div class="last-mess-user-div">Tutto Fatto...</div>
+                        <div class="last-mess-user-div">
+                          {{getLastMess(item.messages_list)}}
+                        </div>
                         <div class="timestamp-user-div">{{item.timesent}}</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-
-
-
             </div>
 
             <div class="col-12-8">
               <div class="col-header">
-                <div class="col-header-div">
+                <div class="col-header-d iv">
                   <img
                     v-bind:src="activeChat.avatar"
                     v-bind:alt="activeChat.avatar"
@@ -126,10 +126,19 @@
                 </div>
               </div>
 
-              <div id ="inputFocusSendMess" class="send-message-div" tabindex="0">
+              <div
+                id="inputFocusSendMess"
+                class="send-message-div"
+                tabindex="0"
+              >
                 <div class="col-10"><i class="far fa-smile"></i></div>
                 <div class="col-80">
-                  <input type="text" v-model="inputTextMess" placeholder="Scrivi un messaggio"  @keyup.enter="addNewMess"/>
+                  <input
+                    type="text"
+                    v-model="inputTextMess"
+                    placeholder="Scrivi un messaggio"
+                    @keyup.enter="addNewMess"
+                  />
                 </div>
                 <div class="col-10"><i class="fas fa-microphone"></i></div>
               </div>

@@ -71,6 +71,7 @@ const vueApp = new Vue({
         timesent: "04/10/2021 09:00:00",
         avatar: "img/avatar_5.jpg",
         messages_list: []
+        
       },
       {
         name: "Marco",
@@ -115,13 +116,23 @@ const vueApp = new Vue({
       const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       const dateTime = date +' '+ time;
       this.timestamp = dateTime;
+    },
+
+    getLastMess(messages){
+      if(messages.length === 0){
+        return "";
+      }else{
+        return messages[messages.length-1].message;
+      }
+
+      
     }
   },
   mounted() {
     const focusToInput = document.getElementById("inputFocusSendMess");
     focusToInput.focus();
     const focusToSearchInput = document.getElementById("search-input");
-    focusToInput.focus();
+    focusToSearchInput.focus();
   },
   // https://stackoverflow.com/questions/52558770/vuejs-search-filter
   computed: {
