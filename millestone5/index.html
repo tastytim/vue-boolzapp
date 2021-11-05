@@ -126,14 +126,14 @@
                   <div :class="messageItem.sent ? 'mess-sent' : 'mess-receiv'">
                     <div class="message-text">
                       {{messageItem.message}}
-                      <div class="icon_open" @click="showWindow">
+                      <div class="icon_open" @click="showWindow(index)">
                         <i class="fas fa-chevron-down"></i>
                       </div>
                     </div>
                     <div class="time-message-sent">
                       <span> {{messageItem.time_mess}}</span>
                     </div>
-                    <div id="index" class="window_delete" :class="[visible ? 'show' : 'hide']"><span>Delete</span></div>
+                    <div id="index" class="window_delete_open" :class="[visible ? 'show' : 'hide']"><span @click="deletThisMessage(index)">Delete</span></div>
                   </div>
                 </div>
               </div>

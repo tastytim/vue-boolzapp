@@ -287,7 +287,7 @@
   display: inline-block;
 }
 
-.window_delete{
+.window_delete_open{
   width: 30%;
   height: 50px;
   max-height: 200px;

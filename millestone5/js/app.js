@@ -146,6 +146,9 @@ const vueApp = new Vue({
     },
     showWindow(){
       this.visible = !this.visible;
+    },
+    deletThisMessage(i){
+      this.activeChat.messages_list.splice(i, 1);
     }
   },
   mounted() {
