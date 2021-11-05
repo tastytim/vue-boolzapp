@@ -3,7 +3,6 @@ Vue.config.devtools = true;
 const vueApp = new Vue({
   el: "#app",
   data: {
-    visible : false,
     inputSearchText : "",
     inputTextMess : "",
     activeUser : null,
@@ -23,11 +22,13 @@ const vueApp = new Vue({
             message: "Hello !",
             time_mess : "04/11/2021",
             sent: true,
+            visible : false,
           },
           {
             message: "Hello. how are you?",
             time_mess : "04/11/2021",
             sent: false,
+            visible : false,
           },
         ],
       },
@@ -40,11 +41,13 @@ const vueApp = new Vue({
             message: "Ciao , Hai portato il cane fuori !",
             time_mess : "04/11/2021",
             sent: true,
+            visible : false,
           },
           {
             message: "Si",
             time_mess : "04/11/2021",
             sent: false,
+            visible : false,
           },
         ],
       },
@@ -82,11 +85,14 @@ const vueApp = new Vue({
     ],
   },
   methods: {
+    // FINESTRA DI CHAT MESSAGGI VUOTA ALL'INIZIO
     chooseChat(chatToActivate, index) {
       this.activeChat = chatToActivate;
       this.activeUser = index;
       this.inputTextMess ="";
     },
+
+    // AGGIUNGO MESSAGGIO
     addNewMess(){
       if(this.activeUser===null){
         return;
@@ -104,6 +110,7 @@ const vueApp = new Vue({
      this.activeChat.timesent = this.getLastTime(this.activeChat.messages_list);
      this.inputTextMess = "";
     },
+    // RISPOSTA AUTOMATICA
     answerOk(){
         setTimeout(() => {
           this.users_list[this.activeUser].messages_list.push({
@@ -113,6 +120,7 @@ const vueApp = new Vue({
            });
         }, 1000);
     },
+    // ORARIO
     // https://stackoverflow.com/questions/57249466/getting-current-time-and-date-in-vue-js
     getNow() {
       const today = new Date();
@@ -125,7 +133,7 @@ const vueApp = new Vue({
     // getNow() {
     //   return day.js().format("DD/MM/YYYY HH:mm:ss");
     // },
-
+// TIRO FUORI ULTIMO MESSAGGIO
     getLastMess(messages){
       if(messages.length === 0){
         return "";
@@ -133,6 +141,7 @@ const vueApp = new Vue({
         return messages[messages.length-1].message;
       }
     },
+    // TIRO FUORI ULTIMO ORARIO
     getLastTime(messages){
       if(messages.length === 0){
         return "";
@@ -141,22 +150,27 @@ const vueApp = new Vue({
         return messages[messages.length-1].time_mess;
       }
     },
+    // IL MOUSE SOPRA ATTIVA ARROW
     overmouse(){
       this.overMouseActive = !this.overMouseActive;
     },
-    showWindow(){
-      this.visible = !this.visible;
+    // CLICK MI APRE IL WINDOW
+    showWindow(i){
+      this.activeChat.messages_list[i].visible = !this.activeChat.messages_list[i].visible;
     },
+    // ELIMINO MESSAGGIO
     deletThisMessage(i){
       this.activeChat.messages_list.splice(i, 1);
     }
   },
+  // CI SONO SOLO I FOCUS INPUT
   mounted() {
     const focusToInput = document.getElementById("inputFocusSendMess");
     focusToInput.focus();
     const focusToSearchInput = document.getElementById("search-input");
     focusToSearchInput.focus();
   },
+  // RICEVO ARRAY FILTRATO CON I NOMI DI UTENTI
   // https://stackoverflow.com/questions/52558770/vuejs-search-filter
   computed: {
     filteredList() {
