@@ -224,7 +224,8 @@
 
 .message-text{
     padding: 0 20px;
-    word-break: inherit;
+    word-break: break-all;
+    position: relative;
 }
 
 .left{
@@ -272,6 +273,39 @@
 .opacity{
   background-color: #E9EBEB;
 }
+
+
+.icon_open{
+  color: #94999a;
+  top:0;
+  right: 0;
+  position: absolute;
+  display: none;
+}
+
+.message-block:hover .icon_open{
+  display: inline-block;
+}
+
+.window_delete{
+  width: 30%;
+  height: 50px;
+  max-height: 200px;
+  position: absolute;
+  background-color: whitesmoke;
+  right: 0;
+  text-align: center;
+  line-height: 50px;
+}
+
+.show{
+  visibility: visible;
+}
+.hide{
+  visibility: hidden;
+}
+
+.icon_open:onclick
 
 
 

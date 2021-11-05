@@ -3,9 +3,10 @@ Vue.config.devtools = true;
 const vueApp = new Vue({
   el: "#app",
   data: {
+    visible : false,
     inputSearchText : "",
     inputTextMess : "",
-    activeOpacity : null,
+    activeUser : null,
     activeChat: {
       name: "",
       timesent : "",
@@ -83,27 +84,29 @@ const vueApp = new Vue({
   methods: {
     chooseChat(chatToActivate, index) {
       this.activeChat = chatToActivate;
-      this.activeOpacity = index;
+      this.activeUser = index;
+      this.inputTextMess ="";
     },
     addNewMess(){
-      if(this.activeOpacity===null){
+      if(this.activeUser===null){
         return;
       }
       if (this.inputTextMess.trim() === "") {
         return;
       }
-     this.users_list[this.activeOpacity].messages_list.push({
+     this.users_list[this.activeUser].messages_list.push({
        
       message: this.inputTextMess,
       time_mess : this.getNow(),
       sent: true,
      });
      this.answerOk();
-     
+     this.activeChat.timesent = this.getLastTime(this.activeChat.messages_list);
+     this.inputTextMess = "";
     },
     answerOk(){
         setTimeout(() => {
-          this.users_list[this.activeOpacity].messages_list.push({
+          this.users_list[this.activeUser].messages_list.push({
             message: "Ok",
             time_mess : this.getNow(),
             sent: false,
@@ -113,11 +116,15 @@ const vueApp = new Vue({
     // https://stackoverflow.com/questions/57249466/getting-current-time-and-date-in-vue-js
     getNow() {
       const today = new Date();
-      const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      const date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
       const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       const dateTime = date +' '+ time;
       return dateTime;
     },
+
+    // getNow() {
+    //   return day.js().format("DD/MM/YYYY HH:mm:ss");
+    // },
 
     getLastMess(messages){
       if(messages.length === 0){
@@ -133,6 +140,12 @@ const vueApp = new Vue({
         console.log(messages[messages.length-1].timesent)
         return messages[messages.length-1].time_mess;
       }
+    },
+    overmouse(){
+      this.overMouseActive = !this.overMouseActive;
+    },
+    showWindow(){
+      this.visible = !this.visible;
     }
   },
   mounted() {
@@ -145,7 +158,7 @@ const vueApp = new Vue({
   computed: {
     filteredList() {
       return this.users_list.filter(user => {
-        return user.name.toLowerCase().includes(this.inputSearchText.toLowerCase())
+        return user.name.toLowerCase().includes(this.inputSearchText.toLowerCase().trim())
       })
     }
   }

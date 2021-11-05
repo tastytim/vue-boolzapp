@@ -12,14 +12,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- CSS STYLE -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- VUE CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
-      integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- DAY.JS CDN -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/plugin/utc.js"></script>
+<script>dayjs.extend(window.dayjs_plugin_utc)</script>
+<script>dayjs().format()</script>
+
+
+    
   </head>
   <body>
     <header></header>
@@ -31,10 +35,10 @@
             <div class="col-12-4 border-right">
               <div class="col-header">
                 <div class="col-header-div">
-                  <img src="img/avatar_io.jpg" alt="avatar_io" />
+                  <img src="img/avatar_1.jpg" alt="avatar_io" />
                 </div>
                 <div class="col-header-div-center custom-padding">
-                  <span>Nome Utente</span>
+                  <span>Timur Pavlenko</span>
                 </div>
                 <div class="col-header-div-left">
                   <i class="fas fa-circle-notch"></i>
@@ -71,7 +75,7 @@
                   >
                     <div
                       class="user-row-div"
-                      :class="index === activeOpacity ? 'opacity' : ''"
+                      :class="index === activeUser ? 'opacity' : ''"
                     >
                       <div>
                         <img
@@ -84,7 +88,9 @@
                         <div class="last-mess-user-div">
                           {{getLastMess(item.messages_list)}}
                         </div>
-                        <div class="timestamp-user-div">{{getLastTime(item.messages_list)}}</div>
+                        <div class="timestamp-user-div">
+                         {{getLastTime(item.messages_list)}}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -102,7 +108,7 @@
                 </div>
                 <div class="col-header-div-center custom-padding">
                   <div>{{activeChat.name}}</div>
-                  <div class="header-col-timeText">{{activeChat.timesent}}</div>
+                  <div class="header-col-timeText">Ultimo accesso oggi alle  {{activeChat.timesent}}</div>
                 </div>
                 <div class="col-header-div-left">
                   <i class="fas fa-search"></i>
@@ -114,14 +120,20 @@
               <div class="messages-window-div">
                 <div
                   class="message-block"
-                  :class="messageItem.sent ? 'right' : 'left'"
+                  :class="messageItem.sent ? 'right' : 'left'" 
                   v-for="(messageItem , index) of activeChat.messages_list"
-                >
+                  >
                   <div :class="messageItem.sent ? 'mess-sent' : 'mess-receiv'">
-                    <div class="message-text">{{messageItem.message}}</div>
+                    <div class="message-text">
+                      {{messageItem.message}}
+                      <div class="icon_open" @click="showWindow">
+                        <i class="fas fa-chevron-down"></i>
+                      </div>
+                    </div>
                     <div class="time-message-sent">
                       <span> {{messageItem.time_mess}}</span>
                     </div>
+                    <div id="index" class="window_delete" :class="[visible ? 'show' : 'hide']"><span>Delete</span></div>
                   </div>
                 </div>
               </div>
