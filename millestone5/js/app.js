@@ -22,13 +22,13 @@ const vueApp = new Vue({
             message: "Hello !",
             time_mess : "04/11/2021",
             sent: true,
-            visible : false,
+            visibleWinDel : false,
           },
           {
             message: "Hello. how are you?",
             time_mess : "04/11/2021",
             sent: false,
-            visible : false,
+            visibleWinDel : false,
           },
         ],
       },
@@ -41,13 +41,13 @@ const vueApp = new Vue({
             message: "Ciao , Hai portato il cane fuori !",
             time_mess : "04/11/2021",
             sent: true,
-            visible : false,
+            visibleWinDel : false,
           },
           {
             message: "Si",
             time_mess : "04/11/2021",
             sent: false,
-            visible : false,
+            visibleWinDel : false,
           },
         ],
       },
@@ -105,6 +105,7 @@ const vueApp = new Vue({
       message: this.inputTextMess,
       time_mess : this.getNow(),
       sent: true,
+      visibleWinDel : false
      });
      this.answerOk();
      this.activeChat.timesent = this.getLastTime(this.activeChat.messages_list);
@@ -117,6 +118,7 @@ const vueApp = new Vue({
             message: "Ok",
             time_mess : this.getNow(),
             sent: false,
+            visibleWinDel : false
            });
         }, 1000);
     },
@@ -156,7 +158,7 @@ const vueApp = new Vue({
     },
     // CLICK MI APRE IL WINDOW
     showWindow(i){
-      this.activeChat.messages_list[i].visible = !this.activeChat.messages_list[i].visible;
+      this.activeChat.messages_list[i].visibleWinDel = !this.activeChat.messages_list[i].visibleWinDel;
     },
     // ELIMINO MESSAGGIO
     deletThisMessage(i){
