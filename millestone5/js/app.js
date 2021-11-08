@@ -108,7 +108,6 @@ const vueApp = new Vue({
       visibleWinDel : false
      });
      this.answerOk();
-     this.activeChat.timesent = this.getLastTime(this.activeChat.messages_list);
      this.inputTextMess = "";
     },
     // RISPOSTA AUTOMATICA
@@ -120,7 +119,9 @@ const vueApp = new Vue({
             sent: false,
             visibleWinDel : false
            });
+           this.activeChat.timesent = this.getLastTime(this.activeChat.messages_list);
         }, 1000);
+        
     },
     // ORARIO
     // https://stackoverflow.com/questions/57249466/getting-current-time-and-date-in-vue-js
@@ -135,7 +136,7 @@ const vueApp = new Vue({
     // getNow() {
     //   return day.js().format("DD/MM/YYYY HH:mm:ss");
     // },
-    
+
 // TIRO FUORI ULTIMO MESSAGGIO
     getLastMess(messages){
       if(messages.length === 0){
