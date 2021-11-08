@@ -135,6 +135,7 @@ const vueApp = new Vue({
     // getNow() {
     //   return day.js().format("DD/MM/YYYY HH:mm:ss");
     // },
+    
 // TIRO FUORI ULTIMO MESSAGGIO
     getLastMess(messages){
       if(messages.length === 0){
@@ -163,8 +164,13 @@ const vueApp = new Vue({
     // ELIMINO MESSAGGIO
     deletThisMessage(i){
       this.activeChat.messages_list.splice(i, 1);
-    }
+    },
+    // <!-- https://stackoverflow.com/questions/47221119/vuejs-how-to-prevent-textarea-default-behavior -->
+    newline() {
+      this.value = `${this.value}\n`;
+    },
   },
+
   // CI SONO SOLO I FOCUS INPUT
   mounted() {
     const focusToInput = document.getElementById("inputFocusSendMess");
