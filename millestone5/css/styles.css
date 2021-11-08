@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+
 .container-whatsapp {
   height: 100vh;
   background-color: #dbdbd4;
   position: relative;
   min-width: 892px;
   min-height: 430px;
-  max-height: 800px;
 }
 
 .green-header-row {
@@ -27,6 +31,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  min-width: 760px;
 }
 
 .col-12-4 {
