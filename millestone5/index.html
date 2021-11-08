@@ -133,7 +133,7 @@
                     <div class="time-message-sent">
                       <span> {{messageItem.time_mess}}</span>
                     </div>
-                    <div class="window_delete_open" :class="[activeChat.messages_list[index].visibleWinDel ? 'show' : 'hide']"><span @click="deletThisMessage(index)">Delete</span></div>
+                    <div @click="deletThisMessage(index)" class="window_delete_open" :class="[activeChat.messages_list[index].visibleWinDel ? 'show' : 'hide']"><span>Delete</span></div>
                   </div>
                 </div>
               </div>
