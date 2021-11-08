@@ -125,17 +125,17 @@ const vueApp = new Vue({
     },
     // ORARIO
     // https://stackoverflow.com/questions/57249466/getting-current-time-and-date-in-vue-js
-    getNow() {
-      const today = new Date();
-      const date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
-      const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      const dateTime = date +' '+ time;
-      return dateTime;
-    },
-
     // getNow() {
-    //   return day.js().format("DD/MM/YYYY HH:mm:ss");
+    //   const today = new Date();
+    //   const date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+    //   const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    //   const dateTime = date +' '+ time;
+    //   return dateTime;
     // },
+
+    getNow() {
+      return dayjs().format("DD/MM/YYYY HH:mm:ss");
+    },
 
 // TIRO FUORI ULTIMO MESSAGGIO
     getLastMess(messages){
